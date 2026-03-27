@@ -1,0 +1,9 @@
+{
+  "name": "mobile-claw-speech-recognition",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local Expo module for iOS speech recognition in mobile-claw.",
+  "license": "Proprietary",
+  "author": "mobile-claw",
+  "homepage": "https://github.com/openai/mobile-claw"
+}

@@ -1,0 +1,97 @@
+{
+  "expo": {
+    "name": "mobile-claw",
+    "slug": "mobile-claw",
+    "version": "1.5.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.flex-lol.mobile-claw",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow mobile-claw to use your camera to scan QR codes and take photos to send to AI.",
+        "NSPhotoLibraryAddUsageDescription": "Allow mobile-claw to save stats posters to your photo library.",
+        "NSSpeechRecognitionUsageDescription": "Allow mobile-claw to transcribe your speech into chat messages.",
+        "CFBundleAllowMixedLocalizations": true,
+        "CFBundleLocalizations": ["en", "zh-Hans", "ja", "ko", "de", "es"],
+        "CFBundleDevelopmentRegion": "en",
+        "UIPrefersShowingLanguageSettings": true
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon-foreground.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.flex-lol.mobile-claw",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow mobile-claw to access your location so your AI agent can know where you are."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow mobile-claw to save stats posters to your photo library.",
+          "savePhotosPermission": "Allow mobile-claw to save stats posters to your photo library."
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      [
+        "expo-sharing",
+        {
+          "ios": {
+            "enabled": true,
+            "activationRule": {
+              "supportsText": true,
+              "supportsWebUrlWithMaxCount": 5,
+              "supportsImageWithMaxCount": 5,
+              "supportsFileWithMaxCount": 3
+            }
+          },
+          "android": {
+            "enabled": true,
+            "singleShareMimeTypes": [
+              "text/*",
+              "image/*",
+              "application/*"
+            ],
+            "multipleShareMimeTypes": [
+              "image/*"
+            ]
+          }
+        }
+      ],
+      "expo-localization",
+      "./plugins/with-locales",
+      "./plugins/with-xcode-env"
+    ],
+    "scheme": "mobile-claw"
+  }
+}
