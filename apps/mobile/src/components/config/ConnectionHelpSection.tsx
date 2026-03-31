@@ -21,10 +21,10 @@ function useSteps(
   if (activeMode === 'relay') {
     return [
       {
-        title: 'Pair your OpenClaw machine first',
+        title: 'Pair your Bridge first',
         body: (
           <Text style={styles.helpText}>
-            The recommended flow is to run <Text style={styles.code}>mobile-claw pair</Text> on your OpenClaw machine and scan the generated QR code.
+            The recommended flow is to run <Text style={styles.code}>clawket pair</Text> on your Bridge host and scan the QR code.
           </Text>
         ),
       },
@@ -32,15 +32,14 @@ function useSteps(
         title: 'Manual Relay details',
         body: (
           <Text style={styles.helpText}>
-            If you are entering values manually, use the fixed Relay WebSocket URL, pair server URL, gateway ID, and auth credential from that paired machine.
-          </Text>
+            If you are entering values manually, use the fixed Relay WebSocket URL, pair server URL, gateway ID, and auth credential from your paired Bridge.
         ),
       },
       {
         title: t('Save & Connect'),
         body: (
           <Text style={styles.helpText}>
-            Tap <Text style={styles.helpBold}>{t('Save & Connect')}</Text>. mobile-claw will connect directly to Relay using the imported pairing details.
+            Tap <Text style={styles.helpBold}>{t('Save & Connect')}</Text>. Clawket will connect directly to Relay using the pairing details from Bridge.
           </Text>
         ),
       },
